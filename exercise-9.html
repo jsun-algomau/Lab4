@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex9</title>
+</head>
+<body>
+  <input type="number" id="numberInput" placeholder="Enter a number" />
+  <button onclick="enter()">Enter</button>
+  <div id="output"></div>
+
+  <script>
+    function enter() {
+      let input = document.getElementById("numberInput").value;
+      document.getElementById("output").textContent = `Your input number is ${input}`;
+    }
+  </script>
+</body>
+</html>

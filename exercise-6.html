@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Ex6</title></head>
+<body>
+<script>
+  function square(n) {
+    return function(x) { return x * x; };
+  }
+  const squareIt = square(5);
+  alert("The square of 5 = " + squareIt(5));
+</script>
+</body>
+</html>

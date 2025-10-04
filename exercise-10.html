@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex10</title>
+</head>
+<body>
+  <p><strong style="font-size: 24px;">This is a square function:</strong></p>
+
+  <input type="number" id="numInput" placeholder="Enter a number" />
+  <button onclick="squareIt()">enter</button>
+
+  <div id="display" style="margin-top: 8px;"></div>
+
+  <script>
+    function makeSquarer() {
+      return function() {
+        let input = document.getElementById("numInput").value;
+        let display = document.getElementById("display");
+
+        if (input === "") {
+          display.innerHTML = '<strong style="font-size: 24px;">Square of  is </strong>';
+          return;
+        }
+
+        let num = Number(input);
+        let result = num * num;
+
+        display.innerHTML =
+          '<strong style="font-size: 24px;">Square of ' + num + ' is ' + result + '</strong>';
+      };
+    }
+
+    let squareIt = makeSquarer();
+  </script>
+</body>
+</html>
